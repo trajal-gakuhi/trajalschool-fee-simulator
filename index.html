@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>TAG index Webサイト</title>
+<script type="text/javascript">
+function keisan() {
+    let form = document.form1;
+
+    // 学費
+    let price1 = 488000;
+
+    // 奨学金（チェックが付いているものだけ加算）
+    let price2 = form.goods2.checked ? -100000 : 0;
+    let price3 = form.goods3.checked ? -100000 : 0;
+    let price4 = form.goods4.checked ? -1000000 : 0;
+    let price5 = form.goods5.checked ? -500000 : 0;
+    let price6 = form.goods6.checked ? -300000 : 0;
+    let price7 = form.goods7.checked ? -100000 : 0;
+    let price8 = form.goods8.checked ? -200000 : 0;
+    let price9 = form.goods9.checked ? -50000 : 0;
+    let price10 = form.goods10.checked ? -352000 : 0;
+
+    // 合計を計算
+    let total = price1 + price2 + price3 + price4 + price5 + price6 + price7 + price8 + price9 + price10;
+
+    form.field_total.value = total;
+}
+</script> 
+</head>
+<body>
+
+<form action="#" name="form1">
+
+<!-- タイトル -->
+<h2>学費分割払い制度ご利用者：入学手続き金シュミレーション</h2>
+<p>該当する奨学金にチェックを入れてください。該当の奨学金は入学手続き書類に同封している学費のお知らせでご確認ください。</strong></p>
+
+<!-- 学費 -->
+<p><strong>学費分割払い制度利用時入学手続き金（規定）: 488,000円</strong></p>
+
+<table border="1" cellpadding="5">
+<tr>
+<th>奨学金種別</th>
+<th>金額</th>
+<th>選択</th>
+</tr>
+<tr>
+<td>AO奨学金</td>
+<td align="right">-100,000円</td>
+<td><input type="checkbox" name="goods2" onChange="keisan()"></td>
+</tr>
+<tr>
+<td>指定校奨学金</td>
+<td align="right">-100,000円</td>
+<td><input type="checkbox" name="goods3" onChange="keisan()"></td>
+</tr>
+<tr>
+<td>AOチャレンジ奨学金Sランク</td>
+<td align="right">-1,000,000円</td>
+<td><input type="checkbox" name="goods4" onChange="keisan()"></td>
+</tr>
+<tr>
+<td>AOチャレンジ奨学金Aランク</td>
+<td align="right">-500,000円</td>
+<td><input type="checkbox" name="goods5" onChange="keisan()"></td>
+</tr>
+<tr>
+<td>AOチャレンジ奨学金Bランク</td>
+<td align="right">-300,000円</td>
+<td><input type="checkbox" name="goods6" onChange="keisan()"></td>
+</tr>
+<tr>
+<td>AOチャレンジ奨学金Cランク</td>
+<td align="right">-100,000円</td>
+<td><input type="checkbox" name="goods7" onChange="keisan()"></td>
+</tr>
+<tr>
+<td>英語資格取得奨学金（英検2級相当）</td>
+<td align="right">-200,000円</td>
+<td><input type="checkbox" name="goods8" onChange="keisan()"></td>
+</tr>
+<tr>
+<td>英語資格取得奨学金（英検準2級相当）</td>
+<td align="right">-50,000円</td>
+<td><input type="checkbox" name="goods9" onChange="keisan()"></td>
+</tr>
+<tr>
+<td>家族推薦入学奨学金（両親・兄弟姉妹が本校卒業生の場合）</td>
+<td align="right">-352,000円</td>
+<td><input type="checkbox" name="goods10" onChange="keisan()"></td>
+</tr>
+<tr>
+<td align="right" colspan="2"><strong>入学手続き時の学費</strong></td>
+<td><input type="text" name="field_total" size="10" value="488000"> 円</td>
+</tr>
+</table>
+
+<!-- 注意書き -->
+<p>※入学手続き時の学費がマイナスの金額になった場合は入学手続き時の学費ご納入は不要です。</p>
+
+</form>
+</body>
+</html>
