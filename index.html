@@ -22,6 +22,9 @@ function keisan() {
     // 合計を計算
     let total = price1 + price2 + price3 + price4 + price5 + price6 + price7 + price8 + price9 + price10;
 
+    // 0円以下は0円に固定
+    total = Math.max(0, total);
+
     form.field_total.value = total;
 }
 </script> 
@@ -32,7 +35,7 @@ function keisan() {
 
 <!-- タイトル -->
 <h2>学費分割払い制度ご利用者：入学手続き金シュミレーション</h2>
-<p>該当する奨学金にチェックを入れてください。該当の奨学金は入学手続き書類に同封している学費のお知らせでご確認ください。</strong></p>
+<p>該当する奨学金にチェックを入れてください。該当の奨学金は入学手続き書類に同封している学費のお知らせでご確認ください。</p>
 
 <!-- 学費 -->
 <p><strong>学費分割払い制度利用時入学手続き金（規定）: 488,000円</strong></p>
